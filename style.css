@@ -29,15 +29,15 @@ body {
     margin: 50px;
 
     width: 400px;
-    height: 250px;
+    height: 300px;
     border-radius: 10px;
     box-shadow: 0px 0px 24px 4px #000000;
 }
 
-#NoCodeBotDownload {
+#NoCodeBotDownloadMsi {
     position: absolute;
-    bottom: 30px;
-    left: 115px;
+    bottom: 80px;
+    left: 45px;
     border: none;
     border-radius: 15px;
     padding: 10px;
@@ -46,7 +46,23 @@ body {
     text-decoration: none;
 }
 
-#NoCodeBotDownload:hover {
+#NoCodeBotDownloadMsi:hover {
+    background-color: rgb(1, 158, 1);
+}
+
+#NoCodeBotDownloadExe {
+    position: absolute;
+    bottom: 30px;
+    left: 85px;
+    border: none;
+    border-radius: 15px;
+    padding: 10px;
+    background-color: green;
+    color: black;
+    text-decoration: none;
+}
+
+#NoCodeBotDownloadExe:hover {
     background-color: rgb(1, 158, 1);
 }
 
