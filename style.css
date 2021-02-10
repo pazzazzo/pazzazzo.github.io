@@ -67,6 +67,19 @@ body {
 }
 
 
+#NoCodeBotDownloadExe.unselectable, #NoCodeBotDownloadMsi.unselectable {
+    background-color: rgb(44, 44, 44);
+    color: rgb(255, 255, 255);
+    user-select: none;
+    cursor: not-allowed;
+}
+
+#NoCodeBotDownloadExe.unselectable:hover, #NoCodeBotDownloadMsi.unselectable:hover {
+    background-color: rgb(44, 44, 44);
+    color: rgb(255, 253, 253);
+}
+
+
 
 
 #TopNews h3 {
@@ -100,14 +113,3 @@ version {
 
 
 
-.unselectable {
-    background-color: rgb(44, 44, 44);
-    color: rgb(255, 255, 255);
-    user-select: none;
-    cursor: none;
-}
-
-.unselectable:hover {
-    background-color: rgb(44, 44, 44);
-    color: rgb(255, 253, 253);
-}
