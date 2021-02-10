@@ -57,13 +57,15 @@ body {
     border: none;
     border-radius: 15px;
     padding: 10px;
-    background-color: green;
+    background-color: rgb(73, 73, 73);
     color: black;
     text-decoration: none;
+
+    user-select: none;
 }
 
 #NoCodeBotDownloadExe:hover {
-    background-color: rgb(1, 158, 1);
+    background-color: rgb(73, 73, 73);
 }
 
 
