@@ -1,0 +1,37 @@
+#navbar {
+    z-index: 10000;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+
+    width: 100%;
+    height: 90px;
+
+    background-color: #272429;
+    box-shadow: 0px 4px 12px 1px #000000;
+}
+
+#Homebtn {
+    position: fixed;
+    left: 15px;
+
+    user-select: none;
+}
+
+#Hydixbtn {
+    text-decoration: none;
+    color: aliceblue;
+
+    font-weight: 1000;
+    font-size: large;
+
+    position: absolute;
+    top: 25px;
+    left: 150px;
+
+    padding: 0.5rem;
+}
+
+#Hydixbtn:hover {
+    color: rgba(240, 248, 255, 0.788);
+}
