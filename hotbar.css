@@ -35,3 +35,43 @@
 #Hydixbtn:hover {
     color: rgba(240, 248, 255, 0.788);
 }
+
+#Discordbtn {
+    position: fixed;
+    right: 5px;
+    top: 5px;
+    
+    text-decoration: none;
+    transition: right linear 0.5s;
+}
+
+#Discordbtn img {
+    height: 50px;
+    width: 50px;
+}
+
+#Discordbtn span {
+    position:absolute;
+    
+    margin-top:23px;
+    margin-left:-35px;
+    color:#09c;
+    background:rgba(0,0,0,.9);
+    padding:15px;
+    border-radius:3px;
+    box-shadow:0 0 2px rgba(0,0,0,.5);
+    transform:scale(0) rotate(-12deg);
+    transition:all .25s;
+    opacity:0;
+    z-index: 10;
+}
+
+
+#Discordbtn:hover span {
+    transform:scale(1) rotate(0);   
+    opacity:1;
+}
+#Discordbtn:hover {
+    right: 50px;
+}
+
