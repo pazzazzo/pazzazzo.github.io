@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>pazzazzo - equation</title>
+</head>
+<body>
+    <div id="StartPage" class="active">
+        <h1 id="Start-title">Séléctionnez le temps entre chaques équations</h1>
+        <input type="range" name="Time" id="Start-times" min="30" max="120" step="5" value="30" oninput="document.getElementById('Start-times-i').innerText = this.value + 's'; document.getElementById('ExTimerBar').max = this.value;document.getElementById('ExTimerBar').value = this.value; document.getElementById('ExTimerText').innerText = this.value + 's'">
+        <h1 id="Start-times-i">30s</h1>
+        <button id="Start-game">Lancer</button>
+    </div>
+    <div id="ReadyPage">
+        <h1 id="ReadyText">5</h1>
+    </div>
+    <div id="ExercisePage">
+        <div id="ExStep">0/5</div>
+        <meter id="ExTimerBar" min="0" max="30" value="30"></meter>
+        <h1 id="ExTimerText">30s</h1>
+        <div id="Eq1">a) Chargement...</div>
+        <div id="Eq2">b) Chargement...</div>
+        <button id="ExPause">Pause</button>
+    </div>
+    <div id="ReadyCPage">
+        <h1 id="ReadyC">Prêts pour la correction?</h1>
+    </div>
+    <div id="CorrectionPage">
+        <div id="correction1">1:\n\ta)</div>
+        <div id="correction2">2:\n\ta)</div>
+        <div id="correction3">3:\n\ta)</div>
+        <div id="correction4">4:\n\ta)</div>
+        <div id="correction5">5:\n\ta)</div>
+    </div>
+    <credit>made by lorenzo V1</credit>
+
+    <script src="script.js"></script>
+</body>
+</html>

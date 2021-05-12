@@ -1,0 +1,279 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap");
+
+* {
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+    user-select: none;
+    font-family: "Poppins", sans-serif;
+    color: white;
+    overflow: none;
+}
+
+button, a, input[type="button"] {
+    cursor: pointer;
+}
+strong {
+    text-decoration: underline solid #515151;
+}
+
+body {
+    overflow: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    min-height: 100vh;
+    background: #0c0c18;
+    overflow-x:hidden; 
+}
+
+.arrow {
+    border: solid rgb(255, 255, 255);
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+  }
+  
+  .right {
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+  }
+  
+  .left {
+    transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+  }
+  
+  .up {
+    transform: rotate(-135deg);
+    -webkit-transform: rotate(-135deg);
+  }
+  
+  .down {
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+}
+
+#StartPage, #ExercisePage, #ReadyPage, #ReadyCPage, #CorrectionPage {
+    background: #0c0c18;
+    position: absolute;
+
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    margin: 0;
+    overflow: none;
+}
+
+#StartPage{
+    top: 0;
+    left: 100%;
+    width: 100%;
+    height: 100%;
+    transition: left .5s;
+}
+#StartPage.active {
+    left: 0;
+}
+
+#ReadyPage {
+    top: 0;
+    right: 100%;
+    width: 100%;
+    height: 100%;
+    transition: right .5s;
+}
+#ReadyPage.active {
+    right: 0;
+}
+
+#ReadyText {
+    font-size: 100px;
+}
+
+#ExercisePage{
+    top: 0;
+    left: 100%;
+    width: 100%;
+    height: 100%;
+    transition: left .5s;
+}
+#ExercisePage.active {
+    left: 0;
+    opacity: 1;
+    transition: opacity 200ms ease 0s;
+} #ExercisePage.active.finish {
+    opacity: 0;
+}
+
+#ReadyCPage {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    display: none;
+    transition: opacity 200ms ease 0s;
+} #ReadyCPage.active {
+    opacity: 1;
+    display: flex;
+}
+
+#CorrectionPage {
+    top: 0;
+    left: 100%;
+    width: 100%;
+    height: 100%;
+    transition: left 200ms ease 0s;
+    white-space: pre-wrap;
+} #CorrectionPage.active {
+    left: 0;
+}
+
+#correction1 {
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    font-size: 20px;
+}#correction2 {
+    position: absolute;
+    top: 200px;
+    left: 50px;
+    font-size: 20px;
+}#correction3 {
+    position: absolute;
+    top: 350px;
+    left: 50px;
+    font-size: 20px;
+}#correction4 {
+    position: absolute;
+    top: 150px;
+    left: 750px;
+    font-size: 20px;
+}#correction5 {
+    position: absolute;
+    top: 300px;
+    left: 750px;
+    font-size: 20px;
+}
+
+
+#Start-title {
+    text-align: center;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+}#Start-times {
+    margin-left: auto;
+    margin-right: auto;
+    position: absolute;
+    top: 120px;
+    align-items: center;
+    justify-content: center;
+    width: 400px;
+}#Start-times-i {
+    position: absolute;
+    top: 190px;
+}#Start-game {
+    height: 180px;
+    width: 390px;
+    border: none;
+    border: black 1px linear;
+    border-radius: 15px;
+    background-color: rgb(15, 194, 15);
+    font-size: 90px;
+    position: absolute;
+    bottom: 150px;
+}
+
+
+input[type=range] {
+    -webkit-appearance: none;
+    margin: 18px 0;
+    width: 200px;
+}
+input[type=range]:focus {
+    outline: none;
+}
+input[type=range]::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 8.4px;
+    cursor: pointer;
+    box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+    background: #10202b;
+    border-radius: 0.3px;
+}
+input[type=range]::-webkit-slider-thumb {
+    box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+    border: 1px solid #000000;
+    height: 36px;
+    width: 16px;
+    border-radius: 3px;
+    background: #ffffff;
+    cursor: pointer;
+    -webkit-appearance: none;
+    margin-top: -14px;
+}
+  
+
+#ExStep {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    font-size: larger;
+    font-weight: 600;
+}
+#ExTimerBar {
+    position: absolute;
+    top: 5px;
+    height: 50px;
+    width: 400px;
+    border: none;
+} #ExTimerBar::-webkit-meter-bar {
+    border-radius: 5px;
+    background-color: #40413f;
+} #ExTimerText {
+    position: absolute;
+    top: 50px;
+}
+
+#Eq1 {
+    position: absolute;
+    top: 150px;
+    font-size: 100px;
+    font-weight: 600;
+}
+#Eq2 {
+    position: absolute;
+    top: 330px;
+    font-size: 100px;
+    font-weight: 600;
+}
+#ExPause {
+    background-color: #1f202e;
+    border: none;
+    position: absolute;
+    bottom: 50px;
+    height: 100px;
+    width: 300px;
+    font-size: 50px;
+    border-radius: 20px;
+} #ExPause:hover {
+    background-color: #1f202eb7;
+} #ExPause:active {
+    background-color: #1f202e94;
+}
+
+credit {
+    position: absolute;
+    color: #515151;
+    user-select: none;
+    z-index: 100;
+    position: absolute;
+    bottom: 5px;
+    left: 5px;
+}
