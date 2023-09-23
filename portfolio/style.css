@@ -1,1 +1,107 @@
 @import url(../style.css);
+
+body {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+}
+
+.border {
+    background-color: #101023;
+    height: 5px;
+    width: 30px;
+    border-radius: 50px;
+}
+
+.left {
+    width: 20vw;
+    height: 100vh;
+}
+.left-header {
+    background-color: var(--color-2);
+    height: 5vw;
+    display: flex;
+    align-items: center;
+    padding-left: 3rem;
+}
+.left-header-content {
+    border-top: 5px white solid;
+    border-bottom: 5px white solid;
+    padding: .5rem 1rem .5rem 1rem;
+
+}
+.left-header-content > p {
+    font-size: large;
+    font-weight: 600;
+}
+.left-body {
+    height: 100%;
+    background-color: var(--color-5);
+    padding-left: 1.5rem;
+    color: #101023;
+}
+.title {
+    padding-top: 3rem;
+    font-size: large;
+    font-weight: 600;
+}
+.desc {
+    padding-top: 1rem;
+    padding-right: 1.5rem;
+}
+
+.right {
+    width: 80vw;
+    height: 100vh;
+}
+.right-header {
+    background-color: var(--color-4);
+    height: 5vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+    font-weight: 600;
+    color: #101023;
+}
+.right-body {
+    height: 100%;
+    background-color: var(--color-5);
+    padding-left: 1.5rem;
+    color: #101023;
+}
+.t-type {
+    font-weight: 600;
+}
+.t-school {
+}
+.t-info {
+    color: var(--text-muted);
+    font-size: .8rem;
+}
+
+
+@media screen and (max-width: 1720px) {
+    .left-header-content {
+        border: none;
+    }
+}
+
+@media screen and (max-width: 1150px) {
+    .left-header {
+        height: 100px;
+        padding: 0;
+    }
+    .right-header {
+        height: 100px;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .left {
+        display: none;
+    }
+    .right {
+        width: 100vw;
+    }
+}
