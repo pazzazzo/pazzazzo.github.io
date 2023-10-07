@@ -1,15 +1,15 @@
-(function () {
-    document.addEventListener("DOMContentLoaded", () => {
-        setTimeout(() => {
-            let gauges = document.getElementsByClassName("gauge-inner")
-            for (let i = 0; i < gauges.length; i++) {
-                const gauge = gauges[i];
-                let percentage = Number(gauge.dataset["fill"])
-                gauge.style.width = percentage + "%"
-            }
-        }, 150);
-    })
-})();
+let gauges = document.getElementsByClassName("gauge-inner")
+let aboutButton = document.getElementById("about-button")
+
+document.addEventListener("DOMContentLoaded", () => {
+    setTimeout(() => {
+        for (let i = 0; i < gauges.length; i++) {
+            const gauge = gauges[i];
+            let percentage = Number(gauge.dataset["fill"])
+            gauge.style.width = percentage + "%"
+        }
+    }, 150);
+})
 
 
 function textCorrupt(domElement) {
@@ -41,3 +41,25 @@ function textCorrupt(domElement) {
 
     const corruptInterval = setInterval(corruptText, 100);
 }
+function preloadPage(targetPage) {
+    const preloader = document.createElement('iframe');
+    preloader.style.display = 'none';
+    preloader.src = targetPage;
+    document.body.appendChild(preloader);
+  }
+
+
+aboutButton.addEventListener("click", (ME) => {
+    ME.preventDefault()
+    let blur = document.createElement("div")
+    blur.style.zIndex = "100"
+    blur.style.position = "absolute"
+    blur.style.inset = "0px"
+    blur.style.animation = "backdrop-blur 1s linear 0s 1 normal forwards, background-black 1s linear 500ms 1 normal forwards"
+    document.body.appendChild(blur)
+    document.title = "Lorenzo Azzopardi - about"
+    preloadPage("./about")
+    setTimeout(() => {
+        location = "./about"
+    }, 2000);
+})

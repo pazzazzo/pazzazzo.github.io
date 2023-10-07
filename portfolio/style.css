@@ -50,6 +50,14 @@ body {
     padding-right: 1.5rem;
 }
 
+.plus {
+    color: #303045;
+    font-size: 14px;
+}
+.plus:hover {
+    text-decoration: underline solid #303045;
+}
+
 .right {
     width: 80vw;
     height: 100vh;

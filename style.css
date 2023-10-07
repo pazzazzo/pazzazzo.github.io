@@ -549,6 +549,33 @@ h1 {
   }
 }
 
+@keyframes backdrop-blur {
+	0% {
+    backdrop-filter: blur(0px);
+	}
+
+	100% {
+    backdrop-filter: blur(30px);
+	}
+}
+@keyframes background-black {
+	0% {
+    background-color: transparent;
+	}
+
+	100% {
+    background-color: black;
+	}
+}
+@keyframes background-transparent {
+	0% {
+    background-color: black;
+	}
+
+	100% {
+    background-color: transparent;
+	}
+}
 
 @keyframes FadeIn {
 	0% {
