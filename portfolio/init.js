@@ -49,17 +49,17 @@ function preloadPage(targetPage) {
   }
 
 
-aboutButton.addEventListener("click", (ME) => {
-    ME.preventDefault()
-    let blur = document.createElement("div")
-    blur.style.zIndex = "100"
-    blur.style.position = "absolute"
-    blur.style.inset = "0px"
-    blur.style.animation = "backdrop-blur 1s linear 0s 1 normal forwards, background-black 1s linear 500ms 1 normal forwards"
-    document.body.appendChild(blur)
-    document.title = "Lorenzo Azzopardi - about"
-    preloadPage("./about")
-    setTimeout(() => {
-        location = "./about"
-    }, 2000);
-})
+// aboutButton.addEventListener("click", (ME) => {
+//     ME.preventDefault()
+//     let blur = document.createElement("div")
+//     blur.style.zIndex = "100"
+//     blur.style.position = "absolute"
+//     blur.style.inset = "0px"
+//     blur.style.animation = "backdrop-blur 1s linear 0s 1 normal forwards, background-black 1s linear 500ms 1 normal forwards"
+//     document.body.appendChild(blur)
+//     document.title = "Lorenzo Azzopardi - about"
+//     preloadPage("./about")
+//     setTimeout(() => {
+//         location = "./about"
+//     }, 2000);
+// })
