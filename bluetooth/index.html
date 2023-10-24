@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lecture Bluetooth</title>
+</head>
+<body>
+    <button id="btn">Start</button>
+    <div id="data"></div>
+
+    <script>
+        const btn = document.getElementById("btn")
+        const dataElement = document.getElementById("data");
+        const deviceName = "HC-06";
+
+        async function connectBluetooth() {
+            try {
+                const device = await navigator.bluetooth.requestDevice({
+                    filters: [{ name: deviceName }],
+                    optionalServices: ['00001101-0000-1000-8000-00805f9b34fb'], // Service SPP générique
+                });
+
+                await device.gatt.connect();
+                const server = device.gatt.server;
+                const service = await server.getPrimaryService('00001101-0000-1000-8000-00805f9b34fb'); // Service SPP générique
+
+                const characteristic = await service.getCharacteristic('00001101-0000-1000-8000-00805f9b34fb'); // Caractéristique SPP générique
+
+                characteristic.addEventListener('characteristicvaluechanged', (event) => {
+                    const value = new TextDecoder().decode(event.target.value);
+                    dataElement.innerHTML = `${value}`;
+                });
+
+                await characteristic.startNotifications();
+
+            } catch (error) {
+                console.error("Erreur Bluetooth:", error);
+                dataElement.innerHTML = `${error}`;
+            }
+        }
+        btn.addEventListener("click", () => {
+            connectBluetooth();
+        })
+    </script>
+</body>
+</html>
