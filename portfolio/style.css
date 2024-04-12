@@ -6,6 +6,8 @@
     --color-3: #5C5CF9;
     /* Couleur du texte principal */
     --color-4: #EEEEEE;
+    --color-4-hover: #e0e0e0;
+    --color-4-hover: #d6d6d6;
     /* Couleur du texte secondaire */
     --color-5: #16162C;
     /* Couleur des accents */
@@ -128,6 +130,14 @@ body {
         padding-top: 0; */
     }
 }
+@media screen and (max-width: 700px) {
+    .project-desc {
+        display: none !important;
+    }
+    .project-gt, .project-pg {
+        white-space: normal !important;
+    }
+}
 
 .gauge {
     background-color: var(--color-5);
@@ -153,7 +163,7 @@ body {
     /* Animation de chargement */
 }
 
-.testimonials-section {
+.projects-section {
     margin-top: 3rem;
     padding: 1.5rem;
     background-color: var(--color-2);
@@ -161,15 +171,53 @@ body {
     border-radius: 15px;
 }
 
-.testimonial {
+.project {
     margin-top: 1.5rem;
     color: #EEEEEE;
 }
 
-.testimonial-name {
+.project-name {
     font-weight: 600;
     color: var(--color-3);
     margin-top: 0.5rem;
+}
+
+a {
+    color: var(--color-4);
+    background-color: #24245a;
+    padding: .5rem;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+}
+a:hover {
+    color: var(--color-4-hover);
+}
+a:active {
+    color: var(--color-4-active);
+}
+a > p {
+    margin: 0;
+}
+
+.project-gt, .project-pg {
+    margin-right: .5rem;
+    white-space: nowrap;
+}
+
+.project {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+}
+.project-desc {
+    margin: 0;
+}
+
+.gt {
+    height: 1.5rem;
+    position: relative;
+    margin-left: .5rem;
 }
 
 /* Scroll Bar */
