@@ -1,10 +1,15 @@
 let gauges = document.getElementsByClassName("gauge-inner")
+let corrupt = document.getElementsByClassName("corrupt")
 let aboutButton = document.getElementById("about-button")
 
 document.addEventListener("DOMContentLoaded", () => {
     for (let i = 0; i < gauges.length; i++) {
         const gauge = gauges[i];
         observer.observe(gauge);
+    }
+    for (let i = 0; i < corrupt.length; i++) {
+        const c = corrupt[i];
+        observer.observe(c);
     }
 })
 
@@ -38,6 +43,7 @@ function textCorrupt(domElement) {
 
     const corruptInterval = setInterval(corruptText, 100);
 }
+
 function preloadPage(targetPage) {
     const preloader = document.createElement('iframe');
     preloader.style.display = 'none';
@@ -48,10 +54,17 @@ function preloadPage(targetPage) {
 const observer = new IntersectionObserver((entries, observer) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
-            let gauge = entry.target
-            let percentage = Number(gauge.dataset["fill"])
-            gauge.style.width = percentage + "%"
-            observer.unobserve(gauge);
+            for (let i = 0; i < gauges.length; i++) {
+                const gauge = gauges[i];
+                if (gauge === entry.target) {
+                    let percentage = Number(gauge.dataset["fill"])
+                    gauge.style.width = percentage + "%"
+                    observer.unobserve(gauge);
+                    return
+                }
+            }
+            textCorrupt(entry.target)
+            observer.unobserve(entry.target);
         }
     });
 }, { threshold: 0.1 });
