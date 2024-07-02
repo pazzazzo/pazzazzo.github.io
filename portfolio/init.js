@@ -2,13 +2,10 @@ let gauges = document.getElementsByClassName("gauge-inner")
 let aboutButton = document.getElementById("about-button")
 
 document.addEventListener("DOMContentLoaded", () => {
-    setTimeout(() => {
-        for (let i = 0; i < gauges.length; i++) {
-            const gauge = gauges[i];
-            let percentage = Number(gauge.dataset["fill"])
-            gauge.style.width = percentage + "%"
-        }
-    }, 150);
+    for (let i = 0; i < gauges.length; i++) {
+        const gauge = gauges[i];
+        observer.observe(gauge);
+    }
 })
 
 
@@ -46,7 +43,18 @@ function preloadPage(targetPage) {
     preloader.style.display = 'none';
     preloader.src = targetPage;
     document.body.appendChild(preloader);
-  }
+}
+
+const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            let gauge = entry.target
+            let percentage = Number(gauge.dataset["fill"])
+            gauge.style.width = percentage + "%"
+            observer.unobserve(gauge);
+        }
+    });
+}, { threshold: 0.1 });
 
 
 // aboutButton.addEventListener("click", (ME) => {
