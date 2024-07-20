@@ -89,15 +89,21 @@ body {
     color: var(--color-3);
 }
 
-.t-type,
-.t-school {
+.t-type {
     font-weight: 600;
+    margin-bottom: .5rem;
+}
+.t-school {
+    margin: 0;
+    margin-left: .5rem;
 }
 
 .t-info {
     color: var(--text-muted);
     font-size: 0.9rem;
+    margin-top: 0.5rem;
     margin-bottom: 2rem;
+    margin-left: .5rem;
 }
 
 /* Media Queries */
