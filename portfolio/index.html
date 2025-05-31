@@ -3,211 +3,164 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <link rel="shortcut icon" href="../pp.png" type="image/x-icon">
-    <link rel="shortcut icon" href="../pp.png" type="image/png">
-    <link rel="icon" href="../pp.png" type="image/png">
-    <meta name="description" content="Depuis mon plus jeune âge, je me passionne pour le développement web...">
-    <meta name="author" content="Lorenzo Azzopardi">
-    <meta name="robots" content="index, follow">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap" rel="stylesheet">
     <title>Lorenzo Azzopardi - portfolio</title>
 </head>
 
 <body>
-    <div class="left">
-        <div class="left-header">
-            <div class="left-header-content">
-                <p>LORENZO</p>
-                <p>AZZOPARDI</p>
-            </div>
-        </div>
-        <div class="left-body">
-            <p class="title corrupt">PROFIL</p>
-            <div class="border"></div>
-            <div class="desc">
-                <p>
-                    Je suis un passionné du développement web, à l'aube de mes 18 ans, avec déjà sept années d'expérience
-                    solide dans ce domaine fascinant. Mon voyage dans l'univers du développement a débuté dès mon plus
-                    jeune âge, et depuis lors, j'ai investi mon temps et mon énergie pour cultiver un savoir-faire
-                    exceptionnel et donner vie à des projets web remarquables.
-                </p>
-
-                <p>
-                    Chaque ligne de code que j'écris est une symphonie de créativité et de précision, et chaque projet
-                    que je réalise est une œuvre d'art numérique. Mon amour pour le web s'exprime à travers ma capacité
-                    à concevoir des sites web innovants, conviviaux et esthétiquement plaisants.
-                </p>
-
-                <p>
-                    Mon parcours unique m'a permis de maîtriser des compétences variées, de la programmation JavaScript
-                    et HTML à la conception CSS, en passant par l'utilisation de technologies modernes comme React. Je
-                    suis déterminé à rester à la pointe de l'industrie, en perpétuelle évolution, et à apporter une
-                    touche de magie digitale à chaque projet.
-                </p>
-
-                <p>
-                    Que vous soyez une entreprise en quête d'une présence en ligne solide ou un particulier souhaitant
-                    concrétiser une idée novatrice, je suis prêt à transformer vos rêves web en réalité. Ensemble, nous
-                    pouvons créer des expériences en ligne exceptionnelles qui captiveront votre public et donneront une
-                    nouvelle dimension à votre présence sur le web.
-                </p>
-
-                <p>
-                    Laissez-moi vous accompagner dans votre voyage numérique, où l'innovation et la qualité sont les
-                    maîtres mots. Contactez-moi dès aujourd'hui pour discuter de la manière dont je peux contribuer à
-                    votre succès en ligne.
-                </p>
-
-            </div>
-            <p class="title corrupt">COMPÉTENCES</p>
-            <div class="border"></div>
-            <div class="desc">
-                <div class="gauge">
-                    <p>Javascript</p>
-                    <div class="gauge-inner" data-fill="94"></div>
-                </div>
-                <div class="gauge">
-                    <p>HTML</p>
-                    <div class="gauge-inner" data-fill="100"></div>
-                </div>
-                <div class="gauge">
-                    <p>CSS</p>
-                    <div class="gauge-inner" data-fill="91"></div>
-                </div>
-                <div class="gauge">
-                    <p>Python</p>
-                    <div class="gauge-inner" data-fill="55"></div>
-                </div>
-                <div class="gauge">
-                    <p>React</p>
-                    <div class="gauge-inner" data-fill="40"></div>
-                </div>
-                <div class="gauge">
-                    <p>VSCode</p>
-                    <div class="gauge-inner" data-fill="100"></div>
-                </div>
-                <div class="gauge">
-                    <p>Bandlab Studio</p>
-                    <div class="gauge-inner" data-fill="15"></div>
-                </div>
-                <div class="gauge">
-                    <p>Figma</p>
-                    <div class="gauge-inner" data-fill="15"></div>
+    <div id="page">
+        <div id="header-container">
+            <span id="header-picture">
+                <img src="../person.avif" alt="">
+            </span>
+            <div id="header-texts">
+                <h1>Lorenzo Azzopardi</h1>
+                <p class="subtitle">Développer Passionné</p>
+                <div id="header-datas">
+                    <div class="header-data">
+                        <img src="../calendar.svg" alt="calendrier">
+                        <span>19 ans</span>
+                    </div>
+                    <a class="header-data" href="mailto:azzo.lorenzo@gmail.com">
+                        <img src="../mail.svg" alt="main">
+                        <span>Contact</span>
+                    </a>
+                    <a class="header-data" href="https://github.com/pazzazzo">
+                        <img src="../github.svg" alt="github">
+                        <span>Github</span>
+                    </a>
                 </div>
             </div>
         </div>
-        <div class="projects-section">
-            <p class="title corrupt">Projets</p>
-            <div class="border"></div>
-            <div class="project">
-                <a href="https://github.com/pazzazzo/E-Motion" class="project-gt" target="_blank">
-                    <p>E-Motion</p><img class="gt" draggable="false" src="../github-logo-bg.png" alt="">
-                </a>
-                <p class="project-desc">(Projet de Buggy High-Tech)</p>
+        <h2>À Propos</h2>
+        <p>Passionné de développement depuis mon plus jeune âge, j'ai commencé à coder en 2017. Je suis constamment à la
+            recherche de nouveaux défis et opportunités pour améliorer mes compétences et créer des solutions
+            innovantes. Mon parcours m'a permis de développer plusieurs projets open source et de contribuer à la
+            communauté des développeurs.</p>
+        <h2>Compétences</h2>
+        <div class="skills">
+            <div class="skill">JavaScript</div>
+            <div class="skill">TypeScript</div>
+            <div class="skill">Node.js</div>
+            <div class="skill">React</div>
+            <div class="skill">HTML/CSS</div>
+            <div class="skill">Git</div>
+            <div class="skill">npm</div>
+            <div class="skill">WebRTC</div>
+            <div class="skill">IoT</div>
+        </div>
+        <h2>Parcours</h2>
+        <div class="careers">
+            <div class="career">
+                <h3 class="career-date">2017</h3>
+                <p class="career-desc">Début du développement</p>
             </div>
-            <div class="project">
-                <a href="https://github.com/pazzazzo/cookieclicker" class="project-gt" target="_blank">
-                    <p>Cookie Clicker</p><img class="gt" draggable="false" src="../github-logo-bg.png" alt="">
-                </a> <a href="https://pazzazzo.github.io/cookieclicker/" target="_blank" class="project-pg">
-                    <p>Tester ici</p>
-                </a>
-                <p class="project-desc">(Jeu Video)</p>
+            <div class="career">
+                <h3 class="career-date">2023</h3>
+                <p class="career-desc">Publication de mon premier module npm: local-connect</p>
             </div>
-            <div class="project">
-                <a href="https://github.com/pazzazzo/FireSense" class="project-gt" target="_blank">
-                    <p>Fire Sense</p><img class="gt" draggable="false" src="../github-logo-bg.png" alt="">
-                </a>
-                <p class="project-desc">(Projet de fin d'année T°STI2D)</p>
+            <div class="career">
+                <h3 class="career-date">Mars 2024</h3>
+                <p class="career-desc">Lancement de mon projet majeur: E-Motion</p>
             </div>
-            <div class="project">
-                <a href="https://github.com/pazzazzo/life-in-javascript" class="project-gt" target="_blank">
-                    <p>Life in JavaScript</p><img class="gt" draggable="false" src="../github-logo-bg.png" alt="">
-                </a> <a href="https://pazzazzo.github.io/life-in-javascript" target="_blank" class="project-pg">
-                    <p>Tester ici</p>
-                </a>
-                <p class="project-desc">(Simulateur de particule)</p>
+            <div class="career">
+                <h3 class="career-date">2024</h3>
+                <p class="career-desc">Publication de mon second module npm: advenced-runner</p>
+                <p class="career-desc">Publication de plusieurs petits projets</p>
             </div>
-            <div class="project">
-                <a href="https://github.com/pazzazzo/basic-game" class="project-gt" target="_blank">
-                    <p>Basic Game</p><img class="gt" draggable="false" src="../github-logo-bg.png" alt="">
-                </a> <a href="https://pazzazzo.github.io/basic-game" target="_blank" class="project-pg">
-                    <p>Tester ici</p>
-                </a>
-                <p class="project-desc">(Jeu Vidéo en 2D sans but)</p>
-            </div>
-            <div class="project">
-                <a href="https://github.com/pazzazzo/baubles" class="project-gt" target="_blank">
-                    <p>Baubles</p><img class="gt" draggable="false" src="../github-logo-bg.png" alt="">
-                </a> <a href="https://pazzazzo.github.io/baubles" target="_blank" class="project-pg">
-                    <p>Tester ici</p>
-                </a>
-                <p class="project-desc">(Animation dite "morph" faite uniquement en JS)</p>
-            </div>
-            <div class="project">
-                <a href="https://github.com/pazzazzo/component-library" class="project-gt" target="_blank">
-                    <p>Component Library</p><img class="gt" draggable="false" src="../github-logo-bg.png" alt="">
-                </a> <a href="https://pazzazzo.github.io/component-library/" target="_blank" class="project-pg">
-                    <p>Tester ici</p>
-                </a>
-                <p class="project-desc">(Librairie de mes composants web)</p>
-            </div>
-            <div class="project">
-                <a href="https://github.com/pazzazzo/simple-js-video-chat" class="project-gt" target="_blank">
-                    <p>Simple JS Voice Chat</p><img class="gt" draggable="false" src="../github-logo-bg.png" alt="">
-                </a>
-                <p class="project-desc">(Serveur web de chat vidéo)</p>
-            </div>
-            <div class="project">
-                <a href="https://github.com/pazzazzo/advenced-runner" class="project-gt" target="_blank">
-                    <p>Advenced Runner</p><img class="gt" draggable="false" src="../github-logo-bg.png" alt="">
-                </a> <a href="https://www.npmjs.com/package/advenced-runner" target="_blank" class="project-pg">
-                    <p>Page du module</p>
-                </a>
-                <p class="project-desc">(Module npm permettant d'avoir des stats sur ses script js)</p>
-            </div>
-            <div class="project">
-                <a href="https://github.com/pazzazzo/local-connect" class="project-gt" target="_blank">
-                    <p>Local Connect</p><img class="gt" draggable="false" src="../github-logo-bg.png" alt="">
-                </a> <a href="https://www.npmjs.com/package/local-connect" target="_blank" class="project-pg">
-                    <p>Page du module</p>
-                </a>
-                <p class="project-desc">(Module npm permettant une interconnexion entre PCs d'un réseau sans serveur)
-                </p>
+            <div class="career">
+                <h3 class="career-date">Juin 2024</h3>
+                <p class="career-desc">Publication du projet de fin d'année STI2D: FireSense</p>
             </div>
         </div>
-    </div>
-    </div>
-    <div class="right">
-        <div class="right-header">
-            <p id="title">Developpeur web - Freelance</p>
-        </div>
-        <div class="right-body">
-            <p class="title">EXPÉRIENCES PROFESSIONNELLES</p>
-            <div class="border"></div>
-            <div class="desc">
-                <div class="training">
-                    <p class="t-type">FREELANCE</p>
-                    <p class="t-info">2022 - 2023</p>
+        <h2>Projets</h2>
+        <div class="projects">
+            <div class="project">
+                <h3 class="project-name">local-connect</h3>
+                <p class="project-date">2023</p>
+                <p class="project-desc">Mon premier module npm, facilitant les connexions locales sans serveur</p>
+                <div class="project-links">
+                    <a href="https://github.com/pazzazzo/local-connect" target="_blank" class="project-link">
+                        <img src="../github.svg" alt="github">
+                        <p>Voir sur GitHub</p>
+                    </a>
                 </div>
             </div>
-            <p class="title">FORMATIONS</p>
-            <div class="border"></div>
-            <div class="desc">
-                <div class="training">
-                    <p class="t-type">BACCALAURÉAT STI2D (SIN)</p>
-                    <p class="t-school">LGT - Blaye</p>
-                    <p class="t-info">2023-2024 &#8226; Admis</p>
+            <div class="project">
+                <h3 class="project-name">advenced-runner</h3>
+                <p class="project-date">2024</p>
+                <p class="project-desc">Module npm pour l'exécution de scripts affichant des données tel que
+                    l'utilisation de la mémoire ou du CPU</p>
+                <div class="project-links">
+                    <a href="https://github.com/pazzazzo/advenced-runner" target="_blank" class="project-link">
+                        <img src="../github.svg" alt="github">
+                        <p>Voir sur GitHub</p>
+                    </a>
                 </div>
-                <div class="training">
-                    <p class="t-type">BUT (Informatique)</p>
-                    <p class="t-school">IUT - Gradignan</p>
-                    <p class="t-info">2024</p>
+            </div>
+            <div class="project">
+                <h3 class="project-name">simple-js-video-chat</h3>
+                <p class="project-date">2024</p>
+                <p class="project-desc">Application de chat vidéo simple en JavaScript</p>
+                <div class="project-links">
+                    <a href="https://github.com/pazzazzo/simple-js-video-chat" target="_blank" class="project-link">
+                        <img src="../github.svg" alt="github">
+                        <p>Voir sur GitHub</p>
+                    </a>
+                </div>
+            </div>
+            <div class="project">
+                <h3 class="project-name">life-in-javascript</h3>
+                <p class="project-date">2024</p>
+                <p class="project-desc">Simulation de vie utilisant la gravitée</p>
+                <div class="project-links">
+                    <a href="https://github.com/pazzazzo/life-in-javascript" target="_blank" class="project-link">
+                        <img src="../github.svg" alt="github">
+                        <p>Voir sur GitHub</p>
+                    </a>
+                </div>
+            </div>
+            <div class="project">
+                <h3 class="project-name">basic-game</h3>
+                <p class="project-date">2024</p>
+                <p class="project-desc">Jeu simple développé en JavaScript</p>
+                <div class="project-links">
+                    <a href="https://github.com/pazzazzo/basic-game" target="_blank" class="project-link">
+                        <img src="../github.svg" alt="github">
+                        <p>Voir sur GitHub</p>
+                    </a>
+                </div>
+            </div>
+            <div class="project">
+                <h3 class="project-name">FireSense</h3>
+                <p class="project-date">Juin 2024</p>
+                <p class="project-desc">Projet de fin d'année STI2D, système de détection d'incendie en forêt en rapport
+                    avec les incendies de forêts de Juillet 2022</p>
+                <div class="project-links">
+                    <a href="https://github.com/pazzazzo/FireSense" target="_blank" class="project-link">
+                        <img src="../github.svg" alt="github">
+                        <p>Voir sur GitHub</p>
+                    </a>
+                </div>
+            </div>
+            <div class="project starred">
+                <h3 class="project-name">E-Motion</h3>
+                <p class="project-date">Mars 2024</p>
+                <p class="project-desc">Projet de dashboard de véhicule</p>
+                <p class="project-desc">Développé avec electron, utilisation de proxy, API privée, linux...</p>
+                <div class="project-links">
+                    <a href="https://github.com/pazzazzo/E-Motion" target="_blank" class="project-link">
+                        <img src="../github.svg" alt="github">
+                        <p>Voir sur GitHub</p>
+                    </a>
                 </div>
             </div>
         </div>
     </div>
-    <script src="./init.js"></script>
 </body>
 
 </html>
