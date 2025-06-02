@@ -1,0 +1,255 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-synthesis-weight: none;
+    text-rendering: optimizeLegibility;
+    font-family: "Geist", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    background-color: #f9fafb;
+    overflow-x: hidden;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+#page {
+    padding: 3rem 1rem;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
+
+#header-container {
+    gap: 1.5rem;
+    align-items: center;
+    flex-direction: column;
+    display: flex;
+    margin-bottom: 3rem;
+}
+
+#header-picture {
+    border-width: 4px;
+    border-radius: 50%;
+    border: 4px solid #ffffff;
+    overflow: hidden;
+    flex-shrink: 0;
+    width: 8rem;
+    height: 8rem;
+    display: flex;
+    position: relative;
+}
+
+#header-picture>img {
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 1 / 1;
+    max-width: 100%;
+    display: block;
+    vertical-align: middle;
+}
+
+h1 {
+    font-weight: 700;
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+    margin: 0;
+}
+
+h2 {
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: #4b55633d solid 1px;
+}
+
+.subtitle {
+    color: #4B5563;
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+    margin: 0;
+    margin-top: 0.5rem;
+}
+
+#header-datas {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    justify-content: center;
+    margin-top: 1rem;
+    color: #4B5563;
+}
+
+.header-data {
+    color: #4B5563;
+    display: flex;
+    gap: 0.25rem;
+    align-items: center;
+}
+
+.header-data>img {
+    display: block;
+    height: 1rem;
+}
+
+.header-data>span {}
+
+.skills {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.skill {
+    background-color: #18181b;
+    color: #fafafa;
+    padding: 2.5px 12.5px;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 2rem;
+    font-size: 0.75rem;
+    line-height: 1rem;
+}
+
+.careers {
+    display: flex;
+    flex-direction: column;
+}
+
+.career {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding-left: 2rem;
+    margin-bottom: 1rem;
+}
+
+.career::before {
+    content: "";
+    height: 1rem;
+    width: 1rem;
+    background-color: #18181b;
+    position: absolute;
+    border-radius: 50%;
+    transform: translate(calc(-100% - 1rem));
+}
+
+.career::after {
+    content: "";
+    height: calc(100% + 1rem);
+    width: 1px;
+    background-color: #4b55633d;
+    position: absolute;
+    border-radius: 50%;
+    transform: translate(calc(-100% - 1.5rem), .5rem);
+    z-index: -1;
+}
+
+.career:last-child:after {
+    display: none;
+}
+
+.career-date {
+    font-weight: 600;
+    margin: 0;
+}
+
+.career-desc {
+    margin: 0;
+    color: #374151;
+}
+
+.projects {
+    gap: 1.5rem;
+    display: grid;
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+
+.project {
+    position: relative;
+    background-color: #ffffff;
+    border: 1px solid #e4e4e7;
+    border-radius: 10px;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+.project > .skills {
+    margin-top: 0.5rem;
+}
+.project.starred::after {
+    content: url("../star.svg");
+    position: absolute;
+    top: 1.25rem;
+    right: 1.25rem;
+}
+
+.project-name {
+    letter-spacing: -0.025em;
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+    font-weight: 600;
+    margin: 0;
+}
+.project-date {
+    margin: 7.5px 0 0;
+    color: #71717a;
+}
+
+.project-desc {
+    color: #4b5563;
+    margin: 0;
+}
+.project-links {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+.project-link {
+    color: #18181B;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: .5rem 0 0;
+}
+.project-link:first-child {
+    margin: 1rem 0 0;
+}
+.project-link > p {
+    margin: 0;
+}
+.project-link > img {
+    display: block;
+    height: 1rem;
+    margin-right: 0.3rem;
+}
+
+@media (min-width: 768px) {
+    #header-datas {
+        justify-content: flex-start;
+    }
+
+    #header-container {
+        justify-content: flex-start;
+        flex-direction: row;
+    }
+
+
+    .projects {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (min-width: 1400px) {
+    #page {
+        max-width: 1400px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .projects {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
