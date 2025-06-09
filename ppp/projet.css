@@ -64,8 +64,6 @@ h1 {
 h2 {
     margin-top: 1.5rem;
     margin-bottom: 1rem;
-    padding-bottom: 1rem;
-    border-bottom: #4b55633d solid 1px;
 }
 
 .subtitle {
@@ -80,9 +78,9 @@ h2 {
     display: flex;
     flex-wrap: wrap;
     gap: 0.75rem;
-    justify-content: center;
     margin-top: 1rem;
     color: #4B5563;
+    justify-content: flex-start;
 }
 
 .header-data {
@@ -90,6 +88,10 @@ h2 {
     display: flex;
     gap: 0.25rem;
     align-items: center;
+}
+
+#page>p {
+    color: #38404b;
 }
 
 .header-data>img {
@@ -164,50 +166,13 @@ h2 {
     color: #374151;
 }
 
-#project-selector-bg {
-    position: absolute;
-    top: .25rem;
-    bottom: .25rem;
-    border-radius: 99px;
-    background-color: #18181B;
-    z-index: 1;
-    transition: all 200ms ease-out;
-}
-
-.project-selector-container {
-    margin-bottom: 1rem;
-}
-
-.project-selector {
-    padding: 0.25rem;
-    background-color: #e3e3e3;
-    border-radius: 99px;
-    display: inline-flex;
-    position: relative;
-}
-
-.project-selector-button {
-    font-weight: 500;
-    font-size: .875rem;
-    line-height: 1.25rem;
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
-    padding-right: 1rem;
-    padding-left: 1rem;
-    cursor: pointer;
-    z-index: 2;
-
-    mix-blend-mode: difference;
-    color: white;
-}
-
 .projects {
     gap: 1.5rem;
     display: grid;
     grid-template-columns: repeat(1, minmax(0, 1fr));
 }
 
-.project {
+.card {
     position: relative;
     background-color: #ffffff;
     border: 1px solid #e4e4e7;
@@ -217,43 +182,50 @@ h2 {
     flex-direction: column;
 }
 
-.project>.skills {
+.card>.skills {
     margin-top: 0.5rem;
 }
 
-.project.starred::after {
+.card.starred::after {
     content: url("../star.svg");
     position: absolute;
     top: 1.25rem;
     right: 1.25rem;
 }
 
-.project-name {
+.card-name {
     letter-spacing: -0.025em;
     font-size: 1.125rem;
     line-height: 1.75rem;
     font-weight: 600;
     margin: 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.card-name > img {
+    margin-right: .3rem;
 }
 
-.project-date {
+.card-date {
     margin: 7.5px 0 0;
     color: #71717a;
 }
 
-.project-desc {
+.card-desc {
     color: #4b5563;
     margin: 0;
 }
 
-.project-links {
+.card-links {
     flex-grow: 1;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
 }
 
-.project-link {
+.card-link {
     color: #18181B;
     display: flex;
     flex-direction: row;
@@ -261,32 +233,62 @@ h2 {
     margin: .5rem 0 0;
 }
 
-.project-link:first-child {
+.card-link:first-child {
     margin: 1rem 0 0;
 }
 
-.project-link>p {
+.card-link>p {
     margin: 0;
 }
 
-.project-link>img {
+.card-link>img {
     display: block;
     height: 1rem;
     margin-right: 0.3rem;
 }
 
+.t-cols {
+    display: grid;
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.img {
+    border-radius: .5rem;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+.img>img {
+    object-fit: cover;
+    height: 16rem;
+    width: 100%;
+    max-width: 100%;
+    display: block;
+}
+
+a.home {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: .5rem;
+    margin: 1rem;
+    background-color: #0d0db3;
+    border-radius: 100%;
+}
+
 @media (min-width: 768px) {
-    #header-datas {
-        justify-content: flex-start;
-    }
 
     #header-container {
         justify-content: flex-start;
         flex-direction: row;
     }
 
-
-    .projects {
+    .projects, .t-cols {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 }

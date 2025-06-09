@@ -12,30 +12,30 @@
 </head>
 
 <body>
-    <main>
+    <main id="main">
         <div id="page">
             <div id="header-container">
                 <span id="header-picture">
-                    <img src="../person.avif" alt="">
+                    <img src="/person.avif" alt="">
                 </span>
                 <div id="header-texts">
-                    <h1>Lorenzo Azzopardi</h1>
+                    <h1>AZZOPARDI Lorenzo</h1>
                     <p class="subtitle">Étudiant en informatique</p>
                     <div id="header-datas">
                         <div class="header-data">
-                            <img src="../calendar.svg" alt="calendrier">
+                            <img src="/calendar.svg" alt="calendrier">
                             <span>19 ans</span>
                         </div>
                         <a class="header-data" href="mailto:azzo.lorenzo@gmail.com">
-                            <img src="../mail.svg" alt="main">
+                            <img src="/mail.svg" alt="main">
                             <span>Contact</span>
                         </a>
                         <a class="header-data" href="https://github.com/pazzazzo">
-                            <img src="../github.svg" alt="github">
+                            <img src="/github.svg" alt="github">
                             <span>Github</span>
                         </a>
                         <a class="header-data" href="/portfolio">
-                            <img src="../briefcase.svg" alt="portfolio">
+                            <img src="/briefcase.svg" alt="portfolio">
                             <span>Portfolio pro</span>
                         </a>
                     </div>
@@ -62,8 +62,16 @@
                 <div class="skill">WebRTC</div>
                 <div class="skill">IoT</div>
             </div>
-            <h2>Parcours scolaire</h2>
+            <h2>Parcours</h2>
             <div class="careers">
+                <div class="career">
+                    <h3 class="career-date">2017</h3>
+                    <p class="career-desc">Début du développement</p>
+                </div>
+                <div class="career">
+                    <h3 class="career-date">Mars 2024</h3>
+                    <p class="career-desc">Lancement de mon projet majeur: E-Motion</p>
+                </div>
                 <div class="career">
                     <h3 class="career-date">Septembre 2024</h3>
                     <p class="career-desc">Année 1 - BUT Informatique</p>
@@ -91,6 +99,16 @@
                 </div>
             </div>
             <h2>Projets</h2>
+            <div class="project-selector-container">
+                <div class="project-selector">
+                    <div id="project-selector-bg"></div>
+                    <div class="project-selector-button active">Tous</div>
+                    <div class="project-selector-button">Scolaire</div>
+                    <div class="project-selector-button">Web</div>
+                    <div class="project-selector-button">Jeux</div>
+                    <div class="project-selector-button">Module npm</div>
+                </div>
+            </div>
             <div class="projects">
                 <div class="project">
                     <h3 class="project-name">SAÉ Odomo</h3>
@@ -101,7 +119,7 @@
                         <div class="skill">Suivi d'un CdC</div>
                     </div>
                     <div class="project-links">
-                        <a href="./" target="_blank" class="project-link">
+                        <a href="./odomo/" class="project-link">
                             <img src="../gantt.svg" alt="projet">
                             <p>Voir le projet</p>
                         </a>
@@ -119,7 +137,7 @@
                         <div class="skill">Réalisation d'une présentation</div>
                     </div>
                     <div class="project-links">
-                        <a href="./" target="_blank" class="project-link">
+                        <a href="./post_install/" target="_blank" class="project-link">
                             <img src="../gantt.svg" alt="projet">
                             <p>Voir le projet</p>
                         </a>
@@ -136,7 +154,7 @@
                         <div class="skill">Analyse PESTEL</div>
                     </div>
                     <div class="project-links">
-                        <a href="./" target="_blank" class="project-link">
+                        <a href="./economie/" target="_blank" class="project-link">
                             <img src="../gantt.svg" alt="projet">
                             <p>Voir le projet</p>
                         </a>
@@ -153,7 +171,7 @@
                         <div class="skill">Gestion du temps</div>
                     </div>
                     <div class="project-links">
-                        <a href="./" target="_blank" class="project-link">
+                        <a href="./lowatem/" target="_blank" class="project-link">
                             <img src="../gantt.svg" alt="projet">
                             <p>Voir le projet</p>
                         </a>
@@ -170,15 +188,28 @@
                         <div class="skill">Gestion du temps</div>
                     </div>
                     <div class="project-links">
-                        <a href="./" target="_blank" class="project-link">
+                        <a href="./web/" target="_blank" class="project-link">
                             <img src="../gantt.svg" alt="projet">
                             <p>Voir le projet</p>
+                        </a>
+                    </div>
+                </div>
+                <div class="project starred">
+                    <h3 class="project-name">E-Motion</h3>
+                    <p class="project-date">Mars 2024</p>
+                    <p class="project-desc">Projet de dashboard de véhicule</p>
+                    <p class="project-desc">Développé avec electron, utilisation de proxy, API privée, linux...</p>
+                    <div class="project-links">
+                        <a href="https://github.com/pazzazzo/E-Motion" target="_blank" class="project-link">
+                            <img src="../github.svg" alt="github">
+                            <p>Voir sur GitHub</p>
                         </a>
                     </div>
                 </div>
             </div>
         </div>
     </main>
+    <script src="./script.js"></script>
 </body>
 
 </html>
