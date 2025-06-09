@@ -18,7 +18,7 @@ if (diffInMinutes >= 1) {
     localStorage.setItem('lastFetch', new Date().toISOString());
     try {
         fetch('https://api.github.com/repos/pazzazzo/E-Motion/commits?per_page=1').then(async res => {
-            if (!res.ok) throw new Error(`HTTP ${res.status}`);
+            if (!res.ok) throw new Error(res);
             const commits = await res.json();
             if (!commits.length) {
                 console.log('Aucun commit trouvé.');
