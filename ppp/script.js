@@ -1,17 +1,21 @@
 let filterButtons = document.querySelectorAll('.project-selector-button');
 let filterBackground = document.getElementById("project-selector-bg")
+let selected = 0
 
-document.addEventListener('DOMContentLoaded', () => {
+function updateSelectedButton() {
   if (filterButtons.length > 0) {
-    filterBackground.style.width = filterButtons[0].clientWidth + "px";
-    filterBackground.style.left = filterButtons[0].offsetLeft + "px";
+    filterBackground.style.width = filterButtons[selected].clientWidth + "px";
+    filterBackground.style.left = filterButtons[selected].offsetLeft + "px";
   }
-});
+}
 
-filterButtons.forEach(button => {
+document.addEventListener('DOMContentLoaded', updateSelectedButton);
+window.addEventListener('resize', updateSelectedButton);
+
+filterButtons.forEach((button, i) => {
   button.addEventListener('click', () => {
-    filterBackground.style.width = button.clientWidth + "px";
-    filterBackground.style.left = button.offsetLeft + "px";
+    selected = i;
+    updateSelectedButton();
     
     
     
