@@ -102,15 +102,15 @@
             <div class="project-selector-container">
                 <div class="project-selector">
                     <div id="project-selector-bg"></div>
-                    <div class="project-selector-button active">Tous</div>
-                    <div class="project-selector-button">Scolaire</div>
-                    <div class="project-selector-button">Web</div>
-                    <div class="project-selector-button">Jeux</div>
-                    <div class="project-selector-button">Module npm</div>
+                    <div class="project-selector-button active" data-select="all">Tous</div>
+                    <div class="project-selector-button" data-select="school">Scolaire</div>
+                    <div class="project-selector-button" data-select="web">Web</div>
+                    <div class="project-selector-button" data-select="game">Jeux</div>
+                    <div class="project-selector-button" data-select="npm">Module npm</div>
                 </div>
             </div>
             <div class="projects">
-                <div class="project">
+                <div class="project" school>
                     <h3 class="project-name">SAÉ Odomo</h3>
                     <p class="project-date">Octobre 2024</p>
                     <p class="project-desc">Création d'une station météo en Java</p>
@@ -125,7 +125,7 @@
                         </a>
                     </div>
                 </div>
-                <div class="project">
+                <div class="project" school>
                     <h3 class="project-name">SAÉ Installation de poste</h3>
                     <p class="project-date">Novembre 2024</p>
                     <p class="project-desc">Création et configuration d'un poste de travail virtuel</p>
@@ -143,7 +143,7 @@
                         </a>
                     </div>
                 </div>
-                <div class="project">
+                <div class="project" school>
                     <h3 class="project-name">SAÉ Économie</h3>
                     <p class="project-date">Décembre 2024</p>
                     <p class="project-desc">Réalisation d'une étude de macro-environnement et micro-environnement d'une entreprise</p>
@@ -160,7 +160,7 @@
                         </a>
                     </div>
                 </div>
-                <div class="project">
+                <div class="project" school game>
                     <h3 class="project-name">SAÉ Lowatem</h3>
                     <p class="project-date">Décembre 2024</p>
                     <p class="project-desc">Réalisation de niveaux d'un jeu</p>
@@ -177,7 +177,7 @@
                         </a>
                     </div>
                 </div>
-                <div class="project">
+                <div class="project" school web>
                     <h3 class="project-name">SAÉ Recueil de besoins</h3>
                     <p class="project-date">Décembre 2024</p>
                     <p class="project-desc">Réalisation de niveaux d'un jeu</p>
@@ -194,7 +194,7 @@
                         </a>
                     </div>
                 </div>
-                <div class="project starred">
+                <div class="project starred" web>
                     <h3 class="project-name">E-Motion</h3>
                     <p class="project-date">Mars 2024</p>
                     <p class="project-desc">Projet de dashboard de véhicule</p>
