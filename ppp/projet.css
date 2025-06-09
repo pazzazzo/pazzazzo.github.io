@@ -99,7 +99,6 @@ h2 {
     height: 1rem;
 }
 
-.header-data>span {}
 
 .skills {
     display: flex;
@@ -172,6 +171,10 @@ h2 {
     grid-template-columns: repeat(1, minmax(0, 1fr));
 }
 
+#page > .card {
+    margin-bottom: 1rem;
+}
+
 .card {
     position: relative;
     background-color: #ffffff;
@@ -241,6 +244,10 @@ h2 {
     flex-direction: row;
     align-items: center;
     margin: .5rem 0 0;
+}
+
+a {
+    color: #18181B;
 }
 
 .card-link:first-child {
