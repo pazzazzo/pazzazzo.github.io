@@ -10,6 +10,16 @@ body {
     overflow-x: hidden;
 }
 
+.modal {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #18181B;
+    border-radius: .5rem;
+    padding: 1rem;
+}
+
 main.fadeout {
     animation: FadeOut .6s ease 0s 1 normal forwards;
 }
