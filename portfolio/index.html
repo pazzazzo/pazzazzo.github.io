@@ -80,8 +80,19 @@
                 </div>
             </div>
             <h2>Projets</h2>
+            <div class="project-selector-container">
+                <div class="project-selector">
+                    <div id="project-selector-bg"></div>
+                    <div class="project-selector-button active" data-select="all">Tous</div>
+                    <div class="project-selector-button" data-select="school">Scolaire</div>
+                    <div class="project-selector-button" data-select="web">Web</div>
+                    <div class="project-selector-button" data-select="nodejs">NodeJS</div>
+                    <div class="project-selector-button" data-select="game">Jeux</div>
+                    <div class="project-selector-button" data-select="npm">Module npm</div>
+                </div>
+            </div>
             <div class="projects">
-                <div class="project">
+                <div class="project" npm nodejs>
                     <h3 class="project-name">local-connect</h3>
                     <p class="project-date">2023</p>
                     <p class="project-desc">Mon premier module npm, facilitant les connexions locales sans serveur</p>
@@ -92,19 +103,7 @@
                         </a>
                     </div>
                 </div>
-                <div class="project">
-                    <h3 class="project-name">advenced-runner</h3>
-                    <p class="project-date">2024</p>
-                    <p class="project-desc">Module npm pour l'exécution de scripts affichant des données tel que
-                        l'utilisation de la mémoire ou du CPU</p>
-                    <div class="project-links">
-                        <a href="https://github.com/pazzazzo/advenced-runner" target="_blank" class="project-link">
-                            <img src="../github.svg" alt="github">
-                            <p>Voir sur GitHub</p>
-                        </a>
-                    </div>
-                </div>
-                <div class="project">
+                <div class="project" web nodejs>
                     <h3 class="project-name">simple-js-video-chat</h3>
                     <p class="project-date">2024</p>
                     <p class="project-desc">Application de chat vidéo simple en JavaScript</p>
@@ -115,7 +114,7 @@
                         </a>
                     </div>
                 </div>
-                <div class="project">
+                <div class="project" web>
                     <h3 class="project-name">life-in-javascript</h3>
                     <p class="project-date">2024</p>
                     <p class="project-desc">Simulation de vie utilisant la gravitée</p>
@@ -126,7 +125,7 @@
                         </a>
                     </div>
                 </div>
-                <div class="project">
+                <div class="project" game>
                     <h3 class="project-name">basic-game</h3>
                     <p class="project-date">2024</p>
                     <p class="project-desc">Jeu simple développé en JavaScript</p>
@@ -137,7 +136,18 @@
                         </a>
                     </div>
                 </div>
-                <div class="project">
+                <div class="project" game nodejs>
+                    <h3 class="project-name">mccitizens-launcher</h3>
+                    <p class="project-date">2024</p>
+                    <p class="project-desc">Launcher minecraft pour des sessions moddées sécurisées avec anticheat</p>
+                    <div class="project-links">
+                        <a href="https://github.com/pazzazzo/mccitizens-launcher" target="_blank" class="project-link">
+                            <img src="../github.svg" alt="github">
+                            <p>Voir sur GitHub</p>
+                        </a>
+                    </div>
+                </div>
+                <div class="project" web school nodejs>
                     <h3 class="project-name">FireSense</h3>
                     <p class="project-date">Juin 2024</p>
                     <p class="project-desc">Projet de fin d'année STI2D, système de détection d'incendie en forêt en
@@ -150,7 +160,7 @@
                         </a>
                     </div>
                 </div>
-                <div class="project starred">
+                <div class="project starred" web nodejs>
                     <h3 class="project-name">E-Motion</h3>
                     <p class="project-date">Mars 2024</p>
                     <p class="project-desc">Projet de dashboard de véhicule</p>
@@ -162,9 +172,44 @@
                         </a>
                     </div>
                 </div>
+                <div class="project" nodejs>
+                    <h3 class="project-name">wifirst-autolog</h3>
+                    <p class="project-date">2025</p>
+                    <p class="project-desc">Script permettant l'auto connexion aux modems wifirst (campus ou classique)</p>
+                    <div class="project-links">
+                        <a href="https://github.com/pazzazzo/wifirst-autolog" target="_blank" class="project-link">
+                            <img src="../github.svg" alt="github">
+                            <p>Voir sur GitHub</p>
+                        </a>
+                    </div>
+                </div>
+                <div class="project" web>
+                    <h3 class="project-name">spotify-redirect</h3>
+                    <p class="project-date">2025</p>
+                    <p class="project-desc">Page internet permettant la redirection des URLs callback Spotify sur une adresse locale permettant de bypass les règles basiques appliquées et rediriger des URLs sur un autre appareil du même réseau</p>
+                    <div class="project-links">
+                        <a href="https://github.com/pazzazzo/spotify-redirect" target="_blank" class="project-link">
+                            <img src="../github.svg" alt="github">
+                            <p>Voir sur GitHub</p>
+                        </a>
+                    </div>
+                </div>
+                <div class="project" npm nodejs>
+                    <h3 class="project-name">localrun</h3>
+                    <p class="project-date">2025</p>
+                    <p class="project-desc">Module npm pour l'exécution de scripts affichant des données tel que
+                        l'utilisation de la mémoire ou du CPU</p>
+                    <div class="project-links">
+                        <a href="https://github.com/pazzazzo/localrun" target="_blank" class="project-link">
+                            <img src="../github.svg" alt="github">
+                            <p>Voir sur GitHub</p>
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
     </main>
+    <script src="./script.js"></script>
 </body>
 
 </html>
