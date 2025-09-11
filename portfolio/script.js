@@ -2,6 +2,11 @@ let filterButtons = document.querySelectorAll('.project-selector-button');
 let filterBackground = document.getElementById("project-selector-bg")
 let projectItems = document.querySelectorAll('.project');
 let selected = 0
+let darkbtn = document.querySelector(".dark-mode")
+
+darkbtn.addEventListener("click", () => {
+    document.body.classList.toggle("dark")
+})
 
 function updateSelectedButton() {
     if (filterButtons.length > 0) {
